@@ -29,15 +29,6 @@ const Navbar = () => {
       quantity: "",
       pricePerPiece: "",
     });
-
-    console.log(
-      "id is ",
-      inputProduct.id,
-      "quantity is ",
-      inputProduct.quantity,
-      "pricePerPiece is ",
-      inputProduct.pricePerPiece
-    );
   };
 
   return (
