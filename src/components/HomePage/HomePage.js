@@ -1,17 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
-import { fetchData } from "../api";
 import Navbar from "../Navbar/Navbar";
 import "./HomePage.css";
 
-const HomePage = () => {
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    fetchData()
-      .then((data) => setData(data))
-      .catch((err) => console.log(err));
-  }, []);
+const HomePage = ({ data }) => {
 
   return (
     <div className="container">
