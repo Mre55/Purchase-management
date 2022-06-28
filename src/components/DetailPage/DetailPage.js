@@ -7,15 +7,12 @@ import './DetailPage.css';
 const DetailPage = () => {
   const [data, setData] = useState([]);
   const { currentData } = useParams();
-  console.log("currentData is ", currentData);
 
   useEffect(() => {
     fetchPurchaseDetail(currentData)
       .then((data) => setData(data))
       .catch((err) => console.log(err));
-  }, []);
-
-  console.log("data is ", data);
+  }, [currentData]);
 
   return (
     <div className="container">
