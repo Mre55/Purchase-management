@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { fetchData } from "../api";
+import Navbar from "../Navbar/Navbar";
 import "./HomePage.css";
 
 const HomePage = () => {
@@ -14,6 +15,8 @@ const HomePage = () => {
 
   return (
     <div className="container">
+      <Navbar />
+      <h2>List of products</h2>
       {data.map((item) => (
         <NavLink
           to={`/detailPage/${item.id}`}
