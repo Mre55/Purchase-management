@@ -66,6 +66,18 @@ const Navbar = () => {
         </div>
         <button className="">Create</button>
       </form>
+      <div>
+        <h4>Filter product by date</h4>
+        <form>
+          <input
+            type="Date"
+            name="purchasedOn"
+            className=""
+            placeholder="Date"
+            autoComplete="off"
+          />
+        </form>
+      </div>
     </div>
   );
 };
